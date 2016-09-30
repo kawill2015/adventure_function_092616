@@ -38,37 +38,37 @@ var actions = [
 */
 
 
-		function newAdventure() {
+function newAdventure() {
 
-			var heroGender;
+	var heroGender;
 
-			if (Math.random() < 0.5) {
-				heroGender = "heroine";
-			} else {
-				heroGender = "hero";
+	if (Math.random() < 0.5) {
+		heroGender = "heroine";
+	} else {
+		heroGender = "hero";
 
-				var chosenMonster = monsters[Math.floor(Math.random() * monsters.length)];
-				var chosenWeapon = weapons[Math.floor(Math.random() * weapons.length)];
-				var chosenAction = actions[Math.floor(Math.random() * actions.length)];
+		var chosenMonster = monsters[Math.floor(Math.random() * monsters.length)];
+		var chosenWeapon = weapons[Math.floor(Math.random() * weapons.length)];
+		var chosenAction = actions[Math.floor(Math.random() * actions.length)];
 
-				var output = "Armed with only their " +
-					chosenWeapon +
-					" our " +
-					heroGender +
-					" " +
-					chosenAction +
-					" the evil " +
-					chosenMonster +
-					"!";
+		var output = "Armed with only their " +
+			chosenWeapon +
+			" our " +
+			heroGender +
+			" " +
+			chosenAction +
+			" the evil " +
+			chosenMonster +
+			"!";
 
-				document.getElementById("adventure").innerHTML = output;
-				return output;
-			}
-		}
+		document.getElementById("adventure").innerHTML = output;
+		return output;
+	}
+}
 
-		newAdventure(); // runs on page load.
+newAdventure(); // runs on page load.
 
-		document.getElementById("new_adventure").onclick = newAdventure; // loads adventure on button click.
+document.getElementById("new_adventure").onclick = newAdventure; // loads adventure on button click.
 
 
 	
